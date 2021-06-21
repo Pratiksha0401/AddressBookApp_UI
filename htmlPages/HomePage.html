@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0.600;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/HomePage.css">
+    <script type="text/javascript" src="../js/homePage.js"></script>
+    <script type="text/javascript" src="../js/site_properties.js"></script>
+    <title>HomePage</title>
 </head>
 <body>
-    Address Book Home Page
+    <header class="header-content header" onclick="location.href='./HomePage.html'">
+        <div class="logo-content">
+            <img src="../assets/addressbook.jpeg" alt="Logo">
+            <div>
+                <span class="address-text">ADDRESS</span><br>
+                <span class="address-text addressBook">BOOK</span>
+            </div>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="header-content sub-main-content">
+            <div class="person-detail-text">
+                Person Details
+            </div>
+            <div onclick="location.href='./AddPerson.html'" class="add-button">
+                <div class="plus-icon">
+                    <img src="../assets/add-24px.svg" alt="Add User Logo">
+                </div>
+                <div>Add User</div>
+            </div>
+            </div>
+        <div class="table-main">
+            <table class="table" id="display">
+            </table>
+        </div>
+    </div>
 </body>
 </html>

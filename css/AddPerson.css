@@ -12,7 +12,7 @@ body {
     flex-direction: row;
     align-items: center;
     display: flex;
-    border: 0px solid blue;
+    border: 0px solid #008CFF;
     justify-content: center;
     font-size: small;
 }
@@ -21,7 +21,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: 0px solid blue;
+    border: 0px solid #008CFF;
     width: 80%;
 }
 
@@ -33,7 +33,7 @@ body {
     font: normal normal bold 20px/25px Montserrat;
     font-family: "Montserrat", sans-serif ;
     letter-spacing: 0px;
-    color: rgb(0, 174, 255);
+    color: #008CFF;
     text-transform: capitalize;
 }
 
