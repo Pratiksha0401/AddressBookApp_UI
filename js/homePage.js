@@ -50,7 +50,7 @@ const remove = (data) => {
 
 const update = (data) => {
     console.log(data)
-    let addBookData = addressBookListt.find(personData => personData._id == data._id);
+    let addBookData = addressBookList.find(personData => personData._id == data._id);
     if (!addBookData) {
         return;
     }
