@@ -4,7 +4,6 @@ let addressBookObject = {};
 window.addEventListener('DOMContentLoaded', (event) => {
     validateName();
     validateAddress();
-    validateZipcode()
     validatePhoneNumber();
     checkForUpdate();
 });
@@ -45,24 +44,6 @@ function validateAddress() {
     });
 }
 
-function validateZipcode() {
-    const zipcode = document.querySelector('#zipcode');
-    const textError = document.querySelector('.zip-error');
-    zipcode.addEventListener('input', function () {
-        if (zipcode.value.length == 0) {
-            textError.textContent = "";
-            return;
-        }
-        try {
-            (new AddressBookData()).zipcode = zipcode.value;
-            textError.textContent = "";
-        } catch (e) {
-            console.log(e);
-            textError.textContent = e;
-        }
-    });
-}
-
 function validatePhoneNumber() {
     const number = document.querySelector('#number');
     const numbererror = document.querySelector('.number-error');
@@ -80,7 +61,6 @@ function validatePhoneNumber() {
         }
     });
 }
-
 
 const save = (event) => {
     event.preventDefault();
@@ -114,26 +94,6 @@ const setAddressBookObject = () => {
     addressBookData.id = addressBookObject._id;
     return addressBookData;
 }
-
-// const createAddressBook = () => {
-//     let addressBookData = new AddressBookData();
-
-//     try {
-//         addressBookData.name = getInputValueId('#name');
-//     } catch (e) {
-//         console.log(e)
-//         setTextValue('.text-error', e);
-//         throw e;
-//     }
-//     addressBookData.address = getInputValueId('#address');
-//     addressBookData.city    = getInputValueId('#city');
-//     addressBookData.state   = getInputValueId('#state');
-//     addressBookData.zipcode = getInputValueId('#zipcode');
-//     addressBookData.phonenumber = getInputValueId('#number');
-//     console.log(addressBookData);
-
-//     return addressBookData;
-// }
 
 const getInputValueId = (id) => {
     let value = document.querySelector(id).value;

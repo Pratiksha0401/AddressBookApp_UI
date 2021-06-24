@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../css/AddPerson.css">
     <script type="text/javascript" src="../js/AddressBook.js"></script>
     <script type="text/javascript" src="../js/formValidation.js"></script>
+    <script type="text/javascript" src="../js/homePage.js"></script>
+    <script type="text/javascript" src="../js/site_properties.js"></script>
     <title>Address Book</title>
 </head>
 
@@ -26,7 +28,7 @@
         </div>
     </header>
     <div class="form-content">
-        <form class="form " action="#" onsubmit="save(event);">
+        <form class="form " action="#" onsubmit="save(event); " onreset="resetForm(event)">
             <div class="form-head">
                 <div class="heading">PERSON ADDRESS FORM</div>
                 <div class="cancelButton">

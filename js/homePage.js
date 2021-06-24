@@ -1,9 +1,9 @@
+
 let addressBookList;
 
 window.addEventListener('DOMContentLoaded', (event) => {
-    console.log("Called Event");
     addressBookList = getDataFromLocalStorage();
-    //document.querySelector('.per-count').textContent = addressBookList.length;
+   document.querySelector('.per-count').textContent = addressBookList.length;
     createInnerHtml();
     localStorage.removeItem("edit-person");
 });
@@ -37,20 +37,20 @@ const getDataFromLocalStorage= () => {
 
 const remove = (data) => {
 
-    let addBookData = addressBookList.find(personData => personData._id == data._id);
+    let addBookData = addressBookList.find(personData => personData._id == data.id);
     if (!addBookData) {
         return;
     }
     const index = addressBookList.map(personData => personData._id).indexOf(addBookData._id);
     addressBookList.splice(index, 1);
     localStorage.setItem('AddressBookList', JSON.stringify(addressBookList));
-   //document.querySelector('.per-count').textContent = addressBookList.length;
+    document.querySelector('.per-count').textContent = addressBookList.length;
     createInnerHtml();
 }
 
 const update = (data) => {
-    console.log(data)
-    let addBookData = addressBookList.find(personData => personData._id == data._id);
+    console.log(data.id);
+    let addBookData = addressBookList.find(personData => personData._id == data.id);
     if (!addBookData) {
         return;
     }

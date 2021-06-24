@@ -1,12 +1,19 @@
 class AddressBookData{
 
+    get id() {
+        return this._id;
+    }
+    set id(id) {
+        this._id = id;
+    }
+
     get name() {
         return this._name;
     }
     set name(name) {    
         console.log(name);
-        let nameRegex = RegExp('^([A-Z]{1}[a-zA-Z]{2,})+\\s{1}([A-Z]{1}[a-zA-Z]{2,})+\\s{1}([A-Z]{1}[a-zA-Z]{2,})+$');
-        if (nameRegex.test(name))
+        let pattern = RegExp('^[A-Z]{1}[a-zA-Z]{2,}$');
+        if (pattern.test(name))
             this._name = name;
         else
             throw 'Incorrect Name';   
@@ -17,8 +24,8 @@ class AddressBookData{
     }
     set address(address) {
         console.log(address)
-        let addressRegex = RegExp('^[a-zA-Z\s]+(\.)? [a-z A-Z]{3,}$');
-        if (addressRegex.test(address))
+        let pattern = RegExp('^[a-zA-Z\s]+(\.)? [a-z A-Z]{3,}$');
+        if (pattern.test(address))
             this._address = address;
         else
             throw 'Incorrect Address';
@@ -42,12 +49,7 @@ class AddressBookData{
         return this._zipcode;
     }
     set zipcode(zipcode) {
-        console.log(zipcode)
-        let zipRegex = RegExp('^[1-9]{1}[0-9]{2}\\s{0,1}[0-9]{3}$');
-        if(zipRegex.test(zipcode))
-            this._zipcode = zipcode;
-        else
-            throw 'Invalid ';  
+        this._zipcode = zipcode;
     }
 
     get phonenumber() {
@@ -55,16 +57,16 @@ class AddressBookData{
     }
     set phonenumber(phonenumber) {
         console.log(phonenumber)
-        let phoneRegex = RegExp('^[+]{0,1}[0-9]{2}\\s{0,1}[1-9]{1}[0-9]{9}$');
-        if (phoneRegex.test(phonenumber))
+        let numberpattern = RegExp('^[0-9]{2}\\s{0,1}[1-9]{1}[0-9]{9}$');
+        if (numberpattern.test(phonenumber))
             this._phonenumber = phonenumber;
         else
             throw 'Incorrect Phone Number';
     }
     
     toString() {
-        return "name="+this.name+" address="+this.address+" city="+this.city+" state="+this.state+
+        return "id=" + this.id +"name="+this.name+" address="+this.address+" city="+this.city+" state="+this.state+
         " zipcode="+this.zipcode+" phonenumber="+this.phonenumber;
     }
 
-}  
+}    
