@@ -1,12 +1,11 @@
 class AddressBookData{
 
+    id;
+
     get id() {
         return this._id;
     }
-    set id(id) {
-        this._id = id;
-    }
-
+    
     get name() {
         return this._name;
     }
@@ -57,7 +56,7 @@ class AddressBookData{
     }
     set phonenumber(phonenumber) {
         console.log(phonenumber)
-        let numberpattern = RegExp('^[0-9]{2}\\s{0,1}[1-9]{1}[0-9]{9}$');
+        let numberpattern = RegExp('[+][0-9]{1,}\\s[1-9]{1}[0-9]{9}$');
         if (numberpattern.test(phonenumber))
             this._phonenumber = phonenumber;
         else

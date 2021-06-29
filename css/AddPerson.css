@@ -12,7 +12,7 @@ body {
     flex-direction: row;
     align-items: center;
     display: flex;
-    border: 0px solid #008CFF;
+    border: 0px solid blue;
     justify-content: center;
     font-size: small;
 }
@@ -21,7 +21,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: 0px solid #008CFF;
+    border: 0px solid blue;
     width: 80%;
 }
 
@@ -80,15 +80,9 @@ body {
     border-radius: 4px;
 }
 
-.heading{
+.form-head-text {
     width: 90%;
     text-align: center;
-}
-
-.cancelButton {
-    width: 10%;
-    opacity: 1;
-    text-align: left;
 }
 
 .row-content {
@@ -109,7 +103,7 @@ body {
     font-size: 16px;
     color: #42515f;
     opacity: 1;
-    font: normal normal normal 16px Roboto;   
+    font-family: Roboto;    
 }
 
 .input {
@@ -118,7 +112,6 @@ body {
     border: 1px solid #ccc ;
     border-radius: 4px;
     resize: vertical;
-    font: normal normal normal 14px Roboto;
 }
 
 select{
@@ -126,27 +119,27 @@ select{
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
-    font: normal normal normal 14px Roboto;
-    color: #42515F;
+    font: normal normal normal 16px Roboto;
+    color: #42515f;
     background-color: transparent;
-    display:flex;
-    flex-direction: row;
+    display:inline-block;
     box-sizing:border-box;
     opacity: 1;
     padding-right: 160px;
 }
+
 #state{
     margin-left: 20px;
 }
+
 .input-code {
-    width:35%;
+    width:30%;
     padding: 14px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc ;
     border-radius: 4px;
     resize: vertical;
-    padding-right:160px;
     margin-left: 20px;
-    font: normal normal normal 14px Roboto;
+    padding-right:162px;
 }
 
 error-output {
@@ -183,6 +176,7 @@ error-output {
     align-items: flex-end;
     margin-right: 30px ;
 }
+
 .add-reset{
     text-align: right;
 }
@@ -222,15 +216,6 @@ error-output {
         width: 85%;
         padding: 44px 20px;
     }    
-    select{
-        margin-right: 0px;
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: flex-start;
-    }
-    .city-state-zip{
-        margin-right: 0px;
-    }
 }
 
 a.button:hover{
@@ -248,10 +233,13 @@ a.button:hover{
     color: white;
 }
 
+.department{
+    margin-left: 30px;
+}
 
 @media only screen and (max-width:320px){
     .label{
-        min-width: 50%;
+        min-width: 50px;
     }
      
 } 
